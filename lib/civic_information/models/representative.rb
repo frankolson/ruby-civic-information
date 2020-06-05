@@ -8,8 +8,9 @@ module CivicInformation
           address: address,
           roles: ['legislatorLowerBody', 'legislatorUpperBody']
         }
+      officials = response.parsed_response["officials"] || []
 
-      response.parsed_response["officials"].map do |representative|
+      officials.map do |representative|
         self.new(representative)
       end
     end
