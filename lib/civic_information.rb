@@ -3,6 +3,7 @@ require "civic_information/version"
 require "civic_information/configuration"
 require "civic_information/models/representative"
 require "civic_information/models/representative/official"
+require "civic_information/models/representative/channel"
 require "civic_information/models/representative/address"
 
 module CivicInformation
