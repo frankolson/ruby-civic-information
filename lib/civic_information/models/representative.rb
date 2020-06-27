@@ -1,6 +1,6 @@
 module CivicInformation
   class Representative
-    attr_accessor :name, :phones
+    attr_accessor :officials
 
     def self.where(address: nil, roles: nil)
       response = CivicInformation.get "/representatives", query: {
@@ -8,16 +8,21 @@ module CivicInformation
           address: address,
           roles: roles
         }.delete_if { |k, v| v.nil? }
-      officials = response.parsed_response["officials"] || []
 
-      officials.map do |representative|
-        self.new(representative)
+      self.new(
+        officials: build_officials(response.parsed_response["officials"] || [])
+      )
+    end
+
+    def initialize(officials:)
+      @officials = officials
+    end
+
+    private
+
+      def self.build_officials(officials_response)
+        officials_response.
+          map { |official| Representative::Official.new(official) }
       end
-    end
-
-    def initialize(representative_json)
-      @name = representative_json["name"]
-      @phones = representative_json["phones"]
-    end
   end
 end

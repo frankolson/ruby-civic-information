@@ -2,6 +2,7 @@ require "httparty"
 require "civic_information/version"
 require "civic_information/configuration"
 require "civic_information/models/representative"
+require "civic_information/models/representative/official"
 
 module CivicInformation
   include HTTParty
