@@ -1,0 +1,96 @@
+{
+  "normalizedInput": {
+    "line1": "",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89523"
+  },
+  "kind": "civicinfo#representativeInfoResponse",
+  "divisions": {
+    "ocd-division/country:us/state:nv": {
+      "name": "Nevada",
+      "officeIndices": [
+        0
+      ]
+    }
+  },
+  "offices": [
+    {
+      "name": "U.S. Senator",
+      "divisionId": "ocd-division/country:us/state:nv",
+      "levels": [
+        "country"
+      ],
+      "roles": [
+        "legislatorUpperBody"
+      ],
+      "officialIndices": [
+        0,
+        1
+      ]
+    }
+  ],
+  "officials": [
+    {
+      "name": "Jacky Rosen",
+      "address": [
+        {
+          "line1": "144 Russell Senate Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 224-6244"
+      ],
+      "urls": [
+        "https://www.rosen.senate.gov/"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "SenJackyRosen"
+        },
+        {
+          "type": "Twitter",
+          "id": "senjackyrosen"
+        }
+      ]
+    },
+    {
+      "name": "Catherine Cortez Masto",
+      "address": [
+        {
+          "line1": "516 Hart Senate Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 224-3542"
+      ],
+      "urls": [
+        "https://www.cortezmasto.senate.gov"
+      ],
+      "photoUrl": "http://bioguide.congress.gov/bioguide/photo/C/C001113.jpg",
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "SenatorCortezMasto"
+        },
+        {
+          "type": "Twitter",
+          "id": "SenCortezMasto"
+        },
+        {
+          "type": "YouTube",
+          "id": "UCip_83SiKUqwnUT57VOXrCg"
+        }
+      ]
+    }
+  ]
+}
