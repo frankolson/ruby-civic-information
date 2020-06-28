@@ -9,6 +9,7 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    byebug (11.1.3)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     hashdiff (1.0.1)
@@ -20,9 +21,21 @@ GEM
     mime-types-data (3.2020.0512)
     minitest (5.14.1)
     multi_xml (0.6.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     public_suffix (4.0.5)
+    rack (2.2.3)
+    rack-protection (2.0.8.1)
+      rack
     rake (12.3.3)
+    ruby2_keywords (0.0.2)
     safe_yaml (1.0.5)
+    sinatra (2.0.8.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    tilt (2.0.10)
     webmock (3.8.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -33,9 +46,11 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.17)
+  byebug
   civic_information!
   minitest (~> 5.14, >= 5.14.1)
   rake (~> 12.3, >= 12.3.3)
+  sinatra (~> 2.0, >= 2.0.8)
   webmock (~> 3.8, >= 3.8.3)
 
 BUNDLED WITH
