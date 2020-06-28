@@ -1,9 +1,9 @@
 require './test/test_helper'
 
-module Representative
+module RepresentativesResource
   class ChannelTest < Minitest::Test
     def setup
-      @channel = CivicInformation::Representative::Channel.new(
+      @channel = CivicInformation::RepresentativesResource::Channel.new(
         JSON.parse(representatives_response_data)['officials'].
           first['channels'].first
       )

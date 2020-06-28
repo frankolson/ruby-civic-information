@@ -1,5 +1,5 @@
 module CivicInformation
-  class Representative::Channel
+  class RepresentativesResource::Channel
     attr_accessor :id, :type
 
     def initialize(channel_json)

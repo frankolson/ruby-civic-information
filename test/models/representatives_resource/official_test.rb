@@ -1,9 +1,9 @@
 require './test/test_helper'
 
-module Representative
+module RepresentativesResource
   class OfficialTest < Minitest::Test
     def setup
-      @official = CivicInformation::Representative::Official.new(
+      @official = CivicInformation::RepresentativesResource::Official.new(
         JSON.parse(representatives_response_data)['officials'].first
       )
     end
@@ -39,14 +39,14 @@ module Representative
     def test_responds_to_channels
       assert_respond_to @official, :channels
       assert_instance_of Array, @official.channels
-      assert_instance_of CivicInformation::Representative::Channel,
+      assert_instance_of CivicInformation::RepresentativesResource::Channel,
         @official.channels.first
     end
 
     def test_responds_to_addresses
       assert_respond_to @official, :addresses
       assert_instance_of Array, @official.addresses
-      assert_instance_of CivicInformation::Representative::Address,
+      assert_instance_of CivicInformation::RepresentativesResource::Address,
         @official.addresses.first
     end
   end

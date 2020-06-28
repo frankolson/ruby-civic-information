@@ -1,5 +1,5 @@
 module CivicInformation
-  class Representative
+  class RepresentativesResource
     attr_accessor :officials
 
     def self.where(address: nil, roles: nil)
@@ -22,7 +22,7 @@ module CivicInformation
 
       def self.build_officials(officials_response)
         officials_response.
-          map { |official| Representative::Official.new(official) }
+          map { |official| RepresentativesResource::Official.new(official) }
       end
   end
 end

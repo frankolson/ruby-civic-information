@@ -1,10 +1,10 @@
 require "httparty"
 require "civic_information/version"
 require "civic_information/configuration"
-require "civic_information/models/representative"
-require "civic_information/models/representative/official"
-require "civic_information/models/representative/channel"
-require "civic_information/models/representative/address"
+require "civic_information/models/representatives_resource"
+require "civic_information/models/representatives_resource/official"
+require "civic_information/models/representatives_resource/channel"
+require "civic_information/models/representatives_resource/address"
 
 module CivicInformation
   include HTTParty

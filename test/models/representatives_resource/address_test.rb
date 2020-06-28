@@ -1,9 +1,9 @@
 require './test/test_helper'
 
-module Representative
+module RepresentativesResource
   class AddressTest < Minitest::Test
     def setup
-      @address = CivicInformation::Representative::Address.new(
+      @address = CivicInformation::RepresentativesResource::Address.new(
         JSON.parse(representatives_response_data)['officials'].
           first['address'].first
       )

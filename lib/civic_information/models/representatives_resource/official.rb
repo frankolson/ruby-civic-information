@@ -1,5 +1,5 @@
 module CivicInformation
-  class Representative::Official
+  class RepresentativesResource::Official
     attr_accessor :name, :photo_url, :party, :phones, :emails, :urls, :channels,
       :addresses
 
@@ -17,11 +17,11 @@ module CivicInformation
     private
 
       def build_addresses(address_json)
-        address_json.map { |address| Representative::Address.new(address) }
+        address_json.map { |address| RepresentativesResource::Address.new(address) }
       end
 
       def build_channels(channels_json)
-        channels_json.map { |channel| Representative::Channel.new(channel) }
+        channels_json.map { |channel| RepresentativesResource::Channel.new(channel) }
       end
   end
 end

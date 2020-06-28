@@ -1,5 +1,5 @@
 module CivicInformation
-  class Representative::Address
+  class RepresentativesResource::Address
     attr_accessor :location_name, :line_one, :line_two, :line_three, :city,
       :state, :zip
 
