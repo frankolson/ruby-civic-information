@@ -42,6 +42,22 @@ CivicInformation.configure do |config|
 end
 ```
 
+## Usage
+
+After configuration, you can do the following things.
+
+### Representatives Resource
+
+[https://developers.google.com/civic-information/docs/v2/representatives](https://developers.google.com/civic-information/docs/v2/representatives)
+
+#### Searching
+
+```ruby
+CivicInformation::RepresentativesResource.
+  where(address: '55555', roles: ['legislatorLowerBody', 'legislatorUpperBody']).
+  officials.map(&:name)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
