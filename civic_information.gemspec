@@ -41,7 +41,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.14", ">= 5.14.1"
   spec.add_development_dependency "webmock", "~> 3.8", ">= 3.8.3"
   spec.add_development_dependency "sinatra", "~> 2.0", ">= 2.0.8"
-  spec.add_development_dependency "byebug"
+  spec.add_development_dependency "byebug", "~> 11.1", ">= 11.1.3"
 
   spec.add_dependency "httparty", "0.18.0"
 end
