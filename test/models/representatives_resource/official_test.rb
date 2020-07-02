@@ -4,7 +4,9 @@ module RepresentativesResource
   class OfficialTest < Minitest::Test
     def setup
       @official = CivicInformation::RepresentativesResource::Official.new(
-        JSON.parse(representatives_response_data)['officials'].first
+        result_index: 0,
+        official_json: JSON.parse(representatives_response_data)['officials'].first,
+        parent_resource_id: nil
       )
     end
 
