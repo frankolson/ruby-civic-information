@@ -2,11 +2,12 @@ module CivicInformation
   class RepresentativesResource
     attr_accessor :divisions, :offices, :officials
 
-    def self.where(address: nil, roles: nil)
+    def self.where(address: nil, roles: nil, levels: nil)
       response = CivicInformation.get "/representatives", query: {
           key: CivicInformation.configuration.google_api_key,
           address: address,
-          roles: roles
+          roles: roles,
+          levels: levels
         }.delete_if { |k, v| v.nil? }
 
       self.new response: response
