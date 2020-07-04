@@ -3,10 +3,12 @@ require './test/test_helper'
 module RepresentativesResource
   class AddressTest < Minitest::Test
     def setup
-      @address = CivicInformation::RepresentativesResource::Address.new(
-        JSON.parse(representatives_response_data)['officials'].
-          first['address'].first
-      )
+      @address = CivicInformation::RepresentativesResource::Address.new({
+        "line1": "144 Russell Senate Office Building",
+        "city": "Washington",
+        "state": "DC",
+        "zip": "20510"
+      })
     end
 
     def test_responds_to_location_name

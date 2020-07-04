@@ -3,11 +3,9 @@ require './test/test_helper'
 module RepresentativesResource
   class OfficialTest < Minitest::Test
     def setup
-      @official = CivicInformation::RepresentativesResource::Official.new(
-        result_index: 0,
-        official_json: JSON.parse(representatives_response_data)['officials'].first,
-        parent_resource_id: nil
-      )
+      stub_civic_information
+      @official = CivicInformation::RepresentativesResource.where().
+        officials.first
     end
 
     def test_responds_to_name
