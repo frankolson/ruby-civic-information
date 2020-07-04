@@ -7,16 +7,16 @@ module CivicInformation
       @parent_resource_id = parent_resource_id
       @result_index = result_index
       @division_id = office_json['divisionId']
-      @levels = office_json['levels']
+      @levels = office_json['levels'] || []
       @name = office_json['name']
-      @roles = office_json['roles']
-      @sources = office_json['sources']
-      @official_indices = office_json['officialIndices']
+      @roles = office_json['roles'] || []
+      @sources = office_json['sources'] || []
+      @official_indices = office_json['officialIndices'] || []
     end
 
     def officials
       parent_resource.officials.select do |official|
-        @official_indices.inclue? official.result_index
+        @official_indices.include? official.result_index
       end
     end
 

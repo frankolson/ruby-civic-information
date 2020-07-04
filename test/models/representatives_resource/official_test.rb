@@ -33,7 +33,6 @@ module RepresentativesResource
     def test_responds_to_urls
       assert_respond_to @official, :urls
       assert_instance_of Array, @official.urls
-      assert_instance_of Array, @official.urls
     end
 
     def test_responds_to_channels
@@ -48,6 +47,13 @@ module RepresentativesResource
       assert_instance_of Array, @official.addresses
       assert_instance_of CivicInformation::RepresentativesResource::Address,
         @official.addresses.first
+    end
+
+    def test_responds_to_offices
+      assert_respond_to @official, :offices
+      assert_instance_of Array, @official.offices
+      assert_instance_of CivicInformation::RepresentativesResource::Office,
+        @official.offices.first
     end
   end
 end
